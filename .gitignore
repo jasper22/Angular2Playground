@@ -273,3 +273,15 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+
+wwwroot/lib/*
+wwwroot/js/*
+wwwroot/app/**/*.map
+typings/
+/wwwroot/app/Page-not-found.component.js
+/wwwroot/app/main.js
+/wwwroot/app/Layout/layout-header.component.js
+/wwwroot/app/Layout/layout-footer.component.js
+/wwwroot/app/Controllers/index-component.js
+/wwwroot/app/app.routing.js
+/wwwroot/app/app.module.js
