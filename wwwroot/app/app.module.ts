@@ -5,29 +5,22 @@ import { FormsModule    }      from "@angular/forms";
 import { RouterModule   }      from "@angular/router";
 import "rxjs/Rx";
 
-import { AppComponent       }    from './app.component';
-//import { AboutComponent     }    from './About.component';
-import { HomeComponent      }    from './Home.component';
-//import { ItemService        }    from './Item.Service';
-//import { ItemListComponent  }    from './Items-list.component';
-//import { ItemDetailsComponent }  from './Item-details.component';
-//import { LoginComponent     }    from './Login.component';
-//import { PageNotFoundComponent}  from './Page-not-found.component';
 
+// Layout components
+import { MainLayout, LAYOUT_COMPONENTS  }   from './Layout/main-layout.component';
+
+// Views
+import { IndexComponent     }   from './Controllers/index-component';
+
+// Routing
 import { AppRouting         }    from './app.routing';
 
 @NgModule({
     // Specifies a list of directives/pipes that belong to this module.
     declarations: [
-        // Main component
-        AppComponent,
-        HomeComponent,
-
-        //AboutComponent,
-        //ItemListComponent,
-        //ItemDetailsComponent,
-        //LoginComponent,
-        //PageNotFoundComponent
+        LAYOUT_COMPONENTS,
+        MainLayout,
+        IndexComponent
     ],
 
     // Specifies a list of modules whose exported directives/pipes should be available to templates in this module. This can also contain ModuleWithProviders.
@@ -49,7 +42,7 @@ import { AppRouting         }    from './app.routing';
 
     // Bootstrap
     bootstrap: [
-        AppComponent
+        MainLayout
     ]
 })
 
