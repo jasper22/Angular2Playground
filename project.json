@@ -1,4 +1,10 @@
 ﻿{
+  "title": "Angular2Playground",
+  "description": "Playground for various Angular2 + ASP .NET Core",
+  "version": "1.0.0",
+  "copyright": "(c) Israel, 2016",
+  "authors": ["jjasper22@gmail.com"],
+  "language": "en",
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.1",
@@ -6,10 +12,6 @@
     },
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
-    "Microsoft.AspNetCore.Razor.Tools": {
-      "version": "1.0.0-preview2-final",
-      "type": "build"
-    },
     "Microsoft.AspNetCore.Routing": "1.0.1",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
@@ -20,7 +22,10 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "BundlerMinifier.Core": "2.2.301",
+    "Microsoft.TypeScript.Compiler": "2.0.6",
+    "Microsoft.TypeScript.MSBuild": "2.0.6"
   },
 
   "tools": {
@@ -38,15 +43,25 @@
     }
   },
 
+  "runtimes": {
+    "win10-x64": {}
+  },
+
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "define": [ "DEBUG" ],
+    "optimize": false,
+    "languageVersion": "csharp6",
+    "xmlDoc": true
   },
 
   "runtimeOptions": {
     "configProperties": {
-      "System.GC.Server": true
-    }
+      "System.GC.Server": true,
+      "System.GC.Concurrent": true,
+    },
+    "applyPatches": true
   },
 
   "publishOptions": {
@@ -59,7 +74,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
+    "prepublish": [ "npm build", "dotnet bundle" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
