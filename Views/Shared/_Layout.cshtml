@@ -7,14 +7,22 @@
         <title>@ViewData["Title"] - Angular2Playground</title>
 
         <environment names="Development">
-            <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/normalize.css" />
+            @*<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />*@
+            <link rel="stylesheet" href="~/lib/primeng/resources/themes/omega/theme.css" />
+            <link rel="stylesheet" href="~/lib/primeng/resources/primeng.css" />
+            <link rel="stylesheet" href="~/css/core-ui.css" />
             <link rel="stylesheet" href="~/css/site.css" />
         </environment>
 
         <environment names="Staging,Production">
-            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+            <link rel="stylesheet" href="~/css/normalize.css" />
+            @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
                   asp-fallback-href="~/lib/bootstrap/css/bootstrap.min.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
+            <link rel="stylesheet" href="~/lib/primeng/resources/themes/omega/theme.css" />
+            <link rel="stylesheet" href="~/lib/primeng/resources/primeng.min.css" />
+            <link rel="stylesheet" href="~/css/core-ui.css" />
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
 

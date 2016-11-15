@@ -12,6 +12,7 @@
   },
   "exclude": [
     "node_modules",
-    "_reference"
+    "_reference",
+    "wwwroot/lib/primeng/*.*"
   ]
 }
