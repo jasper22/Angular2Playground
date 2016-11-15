@@ -1,18 +1,24 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "noImplicitAny": false,
+    "pretty": true,
+    "removeComments": false,
     "sourceMap": true,
+    "target": "es5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
+    "listFiles": false,
+    "listEmittedFiles": true,
+    "diagnostics": true
   },
   "exclude": [
-    "node_modules",
+    "node_modules/**/*.*",
+    "typings",
+    "node_modules/primeng/**/*.*",
     "_reference",
-    "wwwroot/lib/primeng/*.*"
+    "wwwroot/lib/**/*.*"
   ]
 }
