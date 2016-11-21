@@ -1,13 +1,8 @@
 ﻿import { ModuleWithProviders    } from "@angular/core";
 import { Routes, RouterModule   } from "@angular/router";
 
-//import { MainLayout         }   from './Layout/main-layout.component';
+import { PageNotFoundComponent  }   from './Page-not-found.component';
 import { IndexComponent     }   from './Controllers/index-component';
-//import { HomeComponent          } from "./Home.component";
-//import { AboutComponent         } from "./About.component";
-//import { LoginComponent         } from "./Login.component";
-// import { PageNotFoundComponent  } from "./Page-not-found.component";
-//import { ItemDetailsComponent   } from "./Item-details.component";
 
 const appRoutes: Routes = [
     {
@@ -20,10 +15,10 @@ const appRoutes: Routes = [
         redirectTo: ""
     },
 
-    //{
-    //    path: "about",
-    //    component: AboutComponent
-    //},
+    {
+        path: "git",
+        loadChildren: 'app/Controllers/Git/git-module#main'
+    },
 
     //{
     //    path: "login",
@@ -34,10 +29,11 @@ const appRoutes: Routes = [
     //    path: "item/:id",
     //    component: ItemDetailsComponent
     //},
-    //{
-    //    path: '**',
-    //    component: PageNotFoundComponent
-    //}
+
+    {
+        path: '**',
+        component: PageNotFoundComponent
+    }
 ];
 
 export const AppRoutingProviders: any[] = [

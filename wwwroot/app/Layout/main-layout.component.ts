@@ -1,9 +1,12 @@
 ﻿import {Component} from "@angular/core";
 
-import { LayoutTopHeader    }   from "./layout-header.component";
-import { LayoutFooter       }   from "./layout-footer.component";
-import { LayoutLeftSideMenu }   from "./left-side-menu-component";
-import { LayoutRightSideMenu}   from "./right-side-menu-component";
+import { LayoutTopHeader    }   from './layout-header.component';
+import { LayoutFooter       }   from './layout-footer.component';
+import { LayoutLeftSideMenu }   from './left-side-menu-component';
+import { LayoutRightSideMenu}   from './right-side-menu-component';
+
+import { SidebarToggleDirective }   from './Helpers/SidebarToggleDirective';
+import { NAV_DROPDOWN_DIRECTIVES}   from './Helpers/NavDropdownDirective';
 
 
 @Component({
@@ -24,4 +27,4 @@ import { LayoutRightSideMenu}   from "./right-side-menu-component";
 export class MainLayout {
 }
 
-export const LAYOUT_COMPONENTS = [LayoutFooter, LayoutTopHeader, LayoutLeftSideMenu, LayoutRightSideMenu];
+export const LAYOUT_COMPONENTS = [LayoutFooter, LayoutTopHeader, LayoutLeftSideMenu, LayoutRightSideMenu, SidebarToggleDirective, NAV_DROPDOWN_DIRECTIVES];

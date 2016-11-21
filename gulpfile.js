@@ -79,6 +79,13 @@ gulp.task('compile:scss', function () {
       //.pipe(minifyCss({ compatibility: 'ie8' }))
 });
 
+gulp.task('restore:images', function () {
+    gulp.src([
+        'Assets/*.jpg'
+    ]).pipe(gulp.dest('wwwroot/images/'));
+});
+
+
 gulp.task('restore', [
     'restore:core-js',
     'restore:zone.js',
@@ -90,5 +97,6 @@ gulp.task('restore', [
     'restore:bootstrap',
     'restore:primeng',
     'restore:fontawesome',
-    'compile:scss'
+    'compile:scss',
+    'restore:images'
 ]);

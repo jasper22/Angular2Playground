@@ -10,7 +10,9 @@ import "rxjs/Rx";
 import { MainLayout, LAYOUT_COMPONENTS  }   from './Layout/main-layout.component';
 
 // Views
+import { PageNotFoundComponent  }   from './Page-not-found.component';
 import { IndexComponent     }   from './Controllers/index-component';
+import { GitModule          }   from './Controllers/Git/git-module';
 
 // Routing
 import { AppRouting         }    from './app.routing';
@@ -20,7 +22,8 @@ import { AppRouting         }    from './app.routing';
     declarations: [
         LAYOUT_COMPONENTS,
         MainLayout,
-        IndexComponent
+        PageNotFoundComponent,
+        IndexComponent,
     ],
 
     // Specifies a list of modules whose exported directives/pipes should be available to templates in this module. This can also contain ModuleWithProviders.
@@ -29,7 +32,9 @@ import { AppRouting         }    from './app.routing';
         HttpModule,
         FormsModule,
         RouterModule,
-        AppRouting
+        AppRouting,
+
+        GitModule
     ],
 
     // Defines the set of injectable objects that are available in the injector of this module.
