@@ -48,7 +48,8 @@
     "jquery": "^3.1.1",
     "jquery-validation": "^1.15.1",
     "jquery-validation-unobtrusive": "^3.2.6",
-    "primeng": "^1.0.0-rc.4"
+    "primeng": "^1.0.0-rc.4",
+    "font-awesome": "^4.7.0"
   },
 
   "devDependencies": {
@@ -56,7 +57,11 @@
     "@types/node": "^6.0.45",
     "concurrently": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
     "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-typescript": "^3.0.2",
     "gulp-uglify": "^2.0.0",

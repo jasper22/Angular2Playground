@@ -10,8 +10,9 @@
             "taskName": "build",
             "args": [ ],
             "isBuildCommand": true,
-            "showOutput": "silent",
-            "problemMatcher": "$msCompile"
+            "showOutput": "always",
+            "problemMatcher": "$msCompile",
+            "echoCommand": true
         }
     ]
 }

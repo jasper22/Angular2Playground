@@ -3,6 +3,11 @@ This file in the main entry point for defining Gulp tasks and using Gulp plugins
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 */
 var gulp = require('gulp');
+var gutil = require('gulp-util');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minifyCss = require('gulp-minify-css');
+var concat = require('gulp-concat');
 
 var libs = './wwwroot/lib/';
 
@@ -58,6 +63,21 @@ gulp.task('restore:primeng', function () {
     ]).pipe(gulp.dest(libs + 'primeng'));
 });
 
+gulp.task('restore:fontawesome', function () {
+    gulp.src([
+        'node_modules/font-awesome/**/*.*'
+    ]).pipe(gulp.dest(libs + 'font-awesome'));
+});
+
+gulp.task('compile:scss', function () {
+    return gulp.src('Assets/scss/style.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('wwwroot/css/'));
+      //.pipe(minifyCss({ compatibility: 'ie8' }))
+});
 
 gulp.task('restore', [
     'restore:core-js',
@@ -68,5 +88,7 @@ gulp.task('restore', [
     'restore:angular-in-memory-web-api',
     'restore:angular',
     'restore:bootstrap',
-    'restore:primeng'
+    'restore:primeng',
+    'restore:fontawesome',
+    'compile:scss'
 ]);
