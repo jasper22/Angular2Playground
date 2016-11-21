@@ -285,3 +285,4 @@ typings/
 /wwwroot/app/Controllers/index-component.js
 /wwwroot/app/app.routing.js
 /wwwroot/app/app.module.js
+bower_components/
