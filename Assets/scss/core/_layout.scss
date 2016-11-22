@@ -62,6 +62,10 @@ body.navbar-fixed {
 
     .main {
         padding-top: $navbar-height;
+        position:relative;
+        margin-left:  -$sidebar-width -$sidebar-compact-width + 5;
+        margin-right: -$sidebar-width -$sidebar-compact-width + 5;
+        // background-color:blue;
     }
 
     &.top-nav {
@@ -189,7 +193,10 @@ body.sidebar-nav {
         left: 0;
     }
     .main {
-        padding-left: $sidebar-width;
+        position:relative;
+        margin-left:  -$sidebar-compact-width + 5;
+        margin-right: -$sidebar-width - $sidebar-compact-width + 5;
+        // background-color: red;
     }
 
     .footer {
