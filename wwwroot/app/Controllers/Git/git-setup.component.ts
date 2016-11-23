@@ -3,7 +3,7 @@
 @Component ({
     moduleId: module.id,
     selector: 'git-setup',
-    template: 'This is GitSetup component'
+    templateUrl: '/Git/GitSetupView'
 })
 
 export class GitSetup {
