@@ -9,6 +9,7 @@
 /// <reference path="app/controllers/git/git-log.component.js" />
 /// <reference path="app/controllers/git/git-module.js" />
 /// <reference path="app/controllers/git/git-navigation.js" />
+/// <reference path="app/controllers/git/gitserverconfiguration.js" />
 /// <reference path="app/controllers/git/git-setup.component.js" />
 /// <reference path="app/controllers/index-component.js" />
 /// <reference path="app/layout/helpers/navdropdowndirective.js" />
